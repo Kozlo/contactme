@@ -1,0 +1,68 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-3  col-xs-offset-1">
+                <img class="img-responsive" src="public/images/logo.png" alt="Remesis" />
+            </div>
+            <div class="col-xs-6 col-xs-offset-1">
+                <div class="top-text">
+                    <h1 id="mainPageHeader">{{content.header}}</h1>
+                    <div id="mainPageSubText" class="lead dashedBorder">
+                        {{{content.pageText}}}
+                    </div>
+                </div>
+            </div>
+        </div> <!-- row -->
+        <div class="row">
+            <div class="col-xs-12 col-sm-4 col-sm-offset-1">
+                <form role="form" method="post" id="contact-us-form">
+                    <div class="success-error-msg-holder">
+                    </div>
+                    <h3>Sazinies</h3>
+                    <div class="form-group mandatory">
+                        <label for="clientName">Vārds</label>
+                        <input type="text" class="form-control is-required" id="clientName" name="clientName" placeholder="Vārds">
+                    </div>
+                    <div class="form-group mandatory">
+                        <label for="clientEmail">E-pasta adrese</label>
+                        <input type="email" class="form-control is-required" id="clientEmail" name="clientEmail" placeholder="E-pasta adrese">
+                    </div>
+                    <div class="form-group">
+                        <label for="clientPhone">Kontakttālrunis</label>
+                        <input type="text" class="form-control" id="clientPhone" name="clientPhone" placeholder="Kontakttālrunis">
+                    </div>
+                    <div class="form-group mandatory">
+                        <label for="clientNote">Ziņa</label>
+                        <textarea type="textarea" class="form-control is-required" id="clientNote" name="clientNote" rows="4"></textarea>
+                    </div>
+                    <span class="help-block">Lauki, kas apzīmēti ar <span class="red-star">*</span>, jāaizpilda obligāti.</span>
+                    <div class="form-group">
+                        <button type="submit" id="contact-submit" class="btn btn-success">Sūtīt</button>
+                        <div class="loader-wrapper"></div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-xs-12 col-sm-5 col-sm-offset-2">
+                <div class="contact-info dashedBorder">
+                    <div id="companyName" class="contact-property"><span class="property-value">{{content.companyName}}</span></div>
+                    <div id="companyId" class="contact-property"><span class="property-name">Reģ nr.<span class="contact-property-separator">: </span></span><span class="property-value">{{content.companyId}}</span></div>
+                    <div id="contactPhone" class="contact-property"><span class="property-name">Tālrunis<span class="contact-property-separator">: </span></span><span class="property-value">{{content.phone}}</span></div>
+                    <div id="contactEmail" class="contact-property"><span class="property-name">E-pasts<span class="contact-property-separator">: </span></span><span class="property-value">{{content.email}}</span></div>
+                </div>
+            </div>
+        </div> <!-- row -->
+    </div><!-- /.container -->
+</div> <!-- main-content -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Custom JS for this template -->
+<script src="public/js/functions.js"></script>
+<script src="public/js/index.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!-- WIll Include later...-->
+<!--<script src="bower_components/bootstrap/assets/js/ie10-viewport-bug-workaround.js"></script>-->

@@ -25,6 +25,14 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+// views
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
+// export the app and require all routes
+module.exports = app;
+require('./routes');
+
 var port = process.env.PORT || 8080;
 app.listen(port, function() {
     console.log('Listening on port: ' + port);
