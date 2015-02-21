@@ -1,7 +1,7 @@
 if (!global.hasOwnProperty('db')) {
     // Database
     var mongoose = require('mongoose');
-    mongoose.connect(process.env.DB_NAME);
+    mongoose.connect(process.env.MONGOLAB_URI);
     var db = mongoose.connection;
 
     db.on('error', console.error.bind(console, 'MongoDB connection error:'));
