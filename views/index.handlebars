@@ -1,10 +1,10 @@
 <div class="main-content">
     <div class="container-fluid">
         <div class="row">
-            <div class="col-xs-3  col-xs-offset-1">
-                <img class="img-responsive" src="public/images/logo.png" alt="Remesis" />
+            <div class="col-xs-12 col-sm-4 col-sm-offset-2">
+                <img class="logo img-responsive" src="public/images/logo.png" alt="Remesis" />
             </div>
-            <div class="col-xs-6 col-xs-offset-1">
+            <div class="col-xs-12 col-sm-5">
                 <div class="top-text">
                     <h1 id="mainPageHeader">{{content.header}}</h1>
                     <div id="mainPageSubText" class="lead dashedBorder">
@@ -14,7 +14,7 @@
             </div>
         </div> <!-- row -->
         <div class="row">
-            <div class="col-xs-12 col-sm-4 col-sm-offset-1">
+            <div class="col-xs-12 col-sm-4 col-sm-offset-2">
                 <form role="form" method="post" id="contact-us-form">
                     <div class="success-error-msg-holder">
                     </div>
@@ -37,12 +37,12 @@
                     </div>
                     <span class="help-block">Lauki, kas apzīmēti ar <span class="red-star">*</span>, jāaizpilda obligāti.</span>
                     <div class="form-group">
-                        <button type="submit" id="contact-submit" class="btn btn-success">Sūtīt</button>
+                        <button type="submit" id="contact-submit" class="btn btn-danger">Sūtīt</button>
                         <div class="loader-wrapper"></div>
                     </div>
                 </form>
             </div>
-            <div class="col-xs-12 col-sm-5 col-sm-offset-2">
+            <div class="col-xs-12 col-sm-4 col-sm-offset-2">
                 <div class="contact-info dashedBorder">
                     <div id="companyName" class="contact-property"><span class="property-value">{{content.companyName}}</span></div>
                     <div id="companyId" class="contact-property"><span class="property-name">Reģ nr.<span class="contact-property-separator">: </span></span><span class="property-value">{{content.companyId}}</span></div>
