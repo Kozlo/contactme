@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
-mongoose.connect(process.env.DB_NAME);
+mongoose.connect(process.env.MONGOLAB_URI);
 
 var mainPageContentSchema = mongoose.Schema({
     header: String,

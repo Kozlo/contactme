@@ -42,5 +42,5 @@ app.get('/messages', functions.loggedIn, function(req,res){
 require('./content');
 // rotues for operation-related operations
 require('./operations');
-// passport configuration (currently not working)
+// passport configuration
 require('./login');
