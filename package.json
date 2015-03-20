@@ -5,7 +5,7 @@
   "main": "web.js",
   "scripts": {
     "start": "node web.js",
-    "postinstall": "bower install bootstrap; node ./scripts/adminUserScript.js; node ./scripts/contentCreationScript.js; node ./scripts/changePass.js"
+    "postinstall": "bower install bootstrap; node ./scripts/adminUserScript.js; node ./scripts/contentCreationScript.js;"
   },
   "dependencies": {
     "express": "~4.0.0",
