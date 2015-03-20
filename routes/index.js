@@ -25,7 +25,7 @@ app.get('/logout', function(req,res){
 });
 
 app.get('/auth', function(req,res){
-    res.render('auth');
+    res.render('auth', { admin: true });
 });
 
 // admin pages
@@ -42,5 +42,5 @@ app.get('/messages', functions.loggedIn, function(req,res){
 require('./content');
 // rotues for operation-related operations
 require('./operations');
-// passport configuration (currently not working)
+// passport configuration
 require('./login');

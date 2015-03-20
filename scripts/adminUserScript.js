@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
-//
+var mongoose = require('mongoose'),
+    User = require('../models/user.js');
+
 mongoose.connect(process.env.MONGOLAB_URI);
 
 var db = mongoose.connection;
@@ -8,13 +8,6 @@ db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function callback() {
     console.log('Successfully connected to the DB!');
 });
-
-var userSchema = mongoose.Schema({
-    name: String,
-    password: String
-});
-
-var User = mongoose.model('User', userSchema);
 
 User.find({ name: /^Admin/ }, function (err, user) {
     if (err) return console.error(err);
@@ -28,9 +21,7 @@ User.find({ name: /^Admin/ }, function (err, user) {
 function createNewAdmin() {
 
     var admin = new User({ name: 'Admin', password: 'Admin' })
-    console.log(admin.name)
-    console.log(admin.password)
-
+    // password is encrypted automatically by bcrypt
     admin.save(function (err, admin) {
         if (err) return console.error(err);
         console.log('User ' + admin.name + ' saved successfully!');

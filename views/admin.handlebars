@@ -1,7 +1,11 @@
 <div class="container-fluid">
-    <div class="top-text">
-        <h1>Satura pārvaldītājs</h1>
-        <p class="lead">Šeit iespējams nomainīt lapas tekstu.</p>
+    <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+            <div class="top-text">
+                <h1>Satura pārvaldītājs</h1>
+                <p class="lead">Šeit iespējams nomainīt lapas tekstu.</p>
+            </div>
+        </div>
     </div>
     <!--Main page-->
     <div class="row">
@@ -35,6 +39,33 @@
                 </div>
                 <!-- The rest of the updatable fields should go here (email, phone etc.) .... -->
                 <button type="submit" class="btn btn-default">Saglabāt</button>
+            </form>
+        </div>
+    </div>
+
+    <!--Change Password-->
+    <div class="row">
+        <div class="col-xs-4 col-xs-offset-4">
+            <form id="changePasswordForm" action="/change_password" method="post" role="form">
+                <h2>Paroles maiņa</h2>
+                <div class="success-error-msg-holder">
+                </div>
+                <div class="form-group mandatory">
+                    <label>Vecā parole:</label>
+                    <input type="password" id="oldPassword" name="oldPassword" class="form-control is-required"/>
+                </div>
+                <div class="form-group mandatory">
+                    <label>Jaunā parole:</label>
+                    <input type="password" id="newPassword1" name="newPassword1" class="form-control is-required"/>
+                </div>
+                <div class="form-group mandatory">
+                    <label>Jaunā parole vēlreiz:</label>
+                    <input type="password" id="newPassword2" name="newPassword2" class="form-control is-required"/>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Mainīt paroli" class="btn btn-default"/>
+                    <div class="loader-wrapper"></div>
+                </div>
             </form>
         </div>
     </div>
