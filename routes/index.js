@@ -25,7 +25,7 @@ app.get('/logout', function(req,res){
 });
 
 app.get('/auth', function(req,res){
-    res.render('auth');
+    res.render('auth', { admin: true });
 });
 
 // admin pages

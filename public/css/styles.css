@@ -1,7 +1,6 @@
 body {
     padding-top:50px;
     padding-bottom:150px;
-    background: url("../images/mara.png") repeat-y  0 0;
 }
 .top-text {
     padding:40px 15px;
@@ -43,7 +42,9 @@ body {
 
 /* Desktop styles */
 @media (min-width:992px) {
-
+    body.client-page {
+        background: url("../images/mara.png") repeat-y  0 0;
+    }
 }
 
 
