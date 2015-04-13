@@ -46,15 +46,23 @@ app.post('/new_client_message', function(req,res){
         status: false
 
     });
+
+    var msgTxt = "Ziņojums no "  + newClientMessage.name + " (" + newClientMessage.email;
+        if (newClientMessage.phone) {
+            msgTxt += ", " + newClientMessage.phone;
+        }
+        msgTxt += "): ";
+        msgTxt += newClientMessage.note;
+
     newClientMessage.save(function (err, message) {
         if (err) return console.error(err);
         console.log('Client message saved successfully!');
         //send email to 222
         email.smtpTransport.sendMail({
-            from: "222 <222preces@gmail.com>", // sender address
-            to: "222 <222preces@gmail.com>", // comma separated list of receivers
-            subject: "Ziņojums nr: " + message._id, // Subject line
-            text: "Ir pienākusi jauna ziņa no klienta: " + newClientMessage // plaintext body
+            from: "Martins Zakis <remesis.buve@gmail.com>", // sender address
+            to: "martins@remesis.lv", // comma separated list of receivers
+            subject: "Ziņojums no: " + newClientMessage.name, // Subject line
+            text: msgTxt // plaintext body
         }, function(error, response){
             if(error){
                 console.log(error);
