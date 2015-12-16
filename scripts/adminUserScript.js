@@ -1,7 +1,7 @@
 var mongoose = require('mongoose'),
     User = require('../models/user.js');
 
-mongoose.connect(process.env.MONGOLAB_URI);
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/contactme-dev');
 
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));

@@ -5,7 +5,7 @@
 var functions = require('./functions'),
     db = require('../models');
 
-app = require('../web');
+app = require('../server');
 
 // home page
 app.get('/', function(req,res) {
